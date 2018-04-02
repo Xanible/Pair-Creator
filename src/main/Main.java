@@ -1,10 +1,8 @@
 package main;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -27,7 +25,7 @@ public class Main {
 
 		for(int stepSize = 1; stepSize <= maxStepSize; stepSize++) {
 			// Access the directory containing the directories that contain the files
-			File sourceDir = new File("C:\\Users\\colby\\Desktop\\SCHOOL\\AndroidCT\\Cleaned Disassembly");
+			File sourceDir = new File("C:\\Users\\colbyadmin\\Desktop\\SCHOOL\\AndroidCT\\Cleaned Disassembly");
 
 			// Create an array of the directories
 			File[] dirs = sourceDir.listFiles();
@@ -71,7 +69,7 @@ public class Main {
 			System.out.println("The number of unique words for step size " + stepSize + ": "+uniqueValues.size());
 
 			// Output pairs to file
-			BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\colby\\Desktop\\SCHOOL\\AndroidCT\\"
+			BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\colbyadmin\\Desktop\\SCHOOL\\AndroidCT\\"
 					+ "Pairing Lists\\Pair" + stepSize + ".txt"));
 			for(String s: uniqueValues) {
 				bw.write(s);
